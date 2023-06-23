@@ -1,2 +1,4 @@
+Enter the local file path: /Users/siddhantgolangade/Documents/VScode-Directory/FolderForBackup/DummyFile.txt
+Enter the S3 bucket name: sg-s3-bucket-1
 Backup Started. You will be notifed after all the 3 Backups for the day are complete!
 Maximum backups per day (3) reached. Exiting for today.
