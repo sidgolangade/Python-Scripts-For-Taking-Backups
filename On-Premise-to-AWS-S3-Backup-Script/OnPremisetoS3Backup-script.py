@@ -9,8 +9,8 @@ import os
 s3 = boto3.client("s3")
 
 # Specify the file paths
-local_file_path = "/Users/siddhantgolangade/Documents/VScode-Directory/FolderForBackup/DummyFile.txt"
-s3_bucket = "sg-s3-bucket-1"
+local_file_path = input("Enter the local file path: ")
+s3_bucket = input("Enter the S3 bucket name: ")
 backup_count = 0
 
 def backup_job():
@@ -40,11 +40,13 @@ def backup_job():
     # Increment the backup count
     backup_count += 1
 
+# Print the backup completion message
+print(f"Backup Started. You will be notifed after all the 3 Backups for the day are complete!")
+
 # Schedule the backup job
 schedule.every(1).minutes.do(backup_job)
 
 # Keep track of backup iterations
-backup_count = 0
 max_backups = 3
 
 # Run the scheduler
